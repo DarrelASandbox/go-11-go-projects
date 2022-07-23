@@ -4,6 +4,7 @@
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#simple-http-server">simple-http-server</a></li>
     <li><a href="#movies-crud">movies-crud</a></li>
+    <li><a href="#book-management-api">book-management-api</a></li>
   </ol>
 </details>
 
@@ -17,7 +18,7 @@
 
 1. [Original Repo: simple-http-server](https://github.com/AkhilSharma90/simple-http-server-GO)
 2. [Original Repo: movies-crud](https://github.com/AkhilSharma90?tab=repositories&type=source)
-3. [Original Repo: ]()
+3. [Original Repo: book-management-api](https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API)
 4. [Original Repo: ]()
 5. [Original Repo: ]()
 6. [Original Repo: ]()
@@ -49,8 +50,9 @@ Server  -> /hello -> hello func
 
 ## movies-crud
 
-- MySQL + CRUD
 - No database
+- CRUD
+- Gorilla Mux
 
 ```
                                           ROUTES        FUNCTIONS     ENDPOINTS       METHODS
@@ -70,6 +72,44 @@ go env -w GO111MODULE=auto
 go mod init 02-movies-crud/main.go
 go mod tidy
 go get -u github.com/gorilla/mux
+```
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## book-management-api
+
+- MySQL
+- GORM
+- json Marshal & Unmarshal
+- Project structure
+- Gorilla Mux
+
+```
+CMD -> main.go
+
+    -> config       -> app.go
+    -> controllers  -> book controllers
+PKG -> models       -> book.go
+    -> routes       -> bookstore routes
+    -> utils        -> utils.go
+
+
+CONTROLLERS
+GET     -> /book            -> GETBOOKS
+POST    -> /book            -> CREATE BOOK
+GET     -> /book/{bookId}   -> GET BOOK BY ID
+PUT     -> /book/{bookId}   -> UPDATE BOOK
+DELETE  -> /book/{bookId}   -> DELETE BOOK
+```
+
+```sh
+go mod init github.com/DarrelA/go-bookstore
+go get -u gorm.io/gorm
+go get -u gorm.io/driver/sqlite
 ```
 
 &nbsp;
