@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/darrela/11-go-projects/03-book-management-api/pkg/config"
+	"github.com/DarrelASandbox/go-11-go-projects/03-book-management-api/pkg/config"
 	"github.com/jinzhu/gorm"
 )
 

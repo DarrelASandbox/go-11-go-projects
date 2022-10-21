@@ -1,4 +1,4 @@
-module github.com/darrela/11-go-projects/03-book-management-api
+module github.com/DarrelASandbox/go-11-go-projects/03-book-management-api
 
 go 1.18
 

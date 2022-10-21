@@ -1,4 +1,4 @@
-module github.com/darrela/11-go-projects/02-movies-crud
+module github.com/DarrelASandbox/go-11-go-projects/02-movies-crud
 
 go 1.18
 

@@ -64,16 +64,6 @@ Movies Server serving using Gorilla MUX -> CREATE       creteMovie    -> /movies
                                         -> DELETE       deleteMovie   -> /movies/id   -> DELETE   <--|
 ```
 
-- [Error message "go: go.mod file not found in current directory or any parent directory; see 'go help modules'"](https://stackoverflow.com/questions/66894200/error-message-go-go-mod-file-not-found-in-current-directory-or-any-parent-dire)
-
-```sh
-go env
-go env -w GO111MODULE=auto
-go mod init 02-movies-crud/main.go
-go mod tidy
-go get -u github.com/gorilla/mux
-```
-
 &nbsp;
 
 ---
@@ -104,12 +94,6 @@ POST    -> /book            -> CREATE BOOK
 GET     -> /book/{bookId}   -> GET BOOK BY ID
 PUT     -> /book/{bookId}   -> UPDATE BOOK
 DELETE  -> /book/{bookId}   -> DELETE BOOK
-```
-
-```sh
-go mod init github.com/DarrelA/go-bookstore
-go get -u gorm.io/gorm
-go get -u gorm.io/driver/sqlite
 ```
 
 &nbsp;

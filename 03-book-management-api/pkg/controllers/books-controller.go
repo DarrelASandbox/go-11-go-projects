@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/darrela/11-go-projects/03-book-management-api/pkg/models"
-	"github.com/darrela/11-go-projects/03-book-management-api/pkg/utils"
+	"github.com/DarrelASandbox/go-11-go-projects/03-book-management-api/pkg/models"
+	"github.com/DarrelASandbox/go-11-go-projects/03-book-management-api/pkg/utils"
 	"github.com/gorilla/mux"
 )
 
