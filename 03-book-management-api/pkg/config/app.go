@@ -1,8 +1,12 @@
 package config
 
 import (
+	"fmt"
+	"os"
+
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
+	_ "github.com/joho/godotenv/autoload"
 )
 
 var (
@@ -10,13 +14,14 @@ var (
 )
 
 func Connect() {
-	// "mysql", "DBUsername:DBpassword@tcp(127.0.0.1:3306)/book_management_api?charset=utf8&parseTime=True&loc=Local"
-	d, err := gorm.Open("mysql", "REPLACEME:REPLACEME(127.0.0.1:3306)/book_management_api?charset=utf8&parseTime=True&loc=Local")
+	dbInfo := fmt.Sprintf("%s:%s@/%s?charset=utf8&parseTime=True&loc=Local", os.Getenv("MYSQL_USER"), os.Getenv("MYSQL_PASSWORD"), os.Getenv("MYSQL_DB_NAME"))
+	d, err := gorm.Open("mysql", dbInfo)
 	if err != nil {
 		panic(err)
 	}
 
 	db = d
+	fmt.Println("Connected to MySQL Database!")
 }
 
 func GetDB() *gorm.DB {
