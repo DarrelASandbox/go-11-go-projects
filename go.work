@@ -3,4 +3,5 @@ go 1.18
 use (
 	./02-movies-crud
 	./03-book-management-api
+	./04-slack-bot-calculates-age
 )

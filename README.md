@@ -5,6 +5,7 @@
     <li><a href="#simple-http-server">simple-http-server</a></li>
     <li><a href="#movies-crud">movies-crud</a></li>
     <li><a href="#book-management-api">book-management-api</a></li>
+    <li><a href="#book-management-api">book-management-api</a></li>
   </ol>
 </details>
 
@@ -19,7 +20,7 @@
 1. [Original Repo: simple-http-server](https://github.com/AkhilSharma90/simple-http-server-GO)
 2. [Original Repo: movies-crud](https://github.com/AkhilSharma90?tab=repositories&type=source)
 3. [Original Repo: book-management-api](https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API)
-4. [Original Repo: ]()
+4. [Original Repo: slack-bot-calculates-age](https://github.com/AkhilSharma90/GO-Slackbot-Calculates-Age)
 5. [Original Repo: ]()
 6. [Original Repo: ]()
 7. [Original Repo: ]()
@@ -95,6 +96,33 @@ GET     -> /book/{bookId}   -> GET BOOK BY ID
 PUT     -> /book/{bookId}   -> UPDATE BOOK
 DELETE  -> /book/{bookId}   -> DELETE BOOK
 ```
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## slack-bot-calculates-age
+
+- [slack api](https://api.slack.com/)
+- Create slack workspace -> Create app
+- Connect using Socket Mode -> Generate socket-token
+- Event Subscription -> Enable Events -> Subscribe to bot events -> Add Bot User Event
+  - app_mention
+  - im_history_changed
+  - message.im
+  - message.channels
+  - message.mpim
+- OAuth & Permissions -> Bot Token Scopes
+  - chat:write
+  - chat:write.public
+  - channels:read
+  - im:read
+  - im:write
+  - mpim:read
+  - mpim:write
+- Install to workspace -> Allow
 
 &nbsp;
 
