@@ -122,6 +122,7 @@ DELETE  -> /book/{bookId}   -> DELETE BOOK
   - im:write
   - mpim:read
   - mpim:write
+  - users:read
 - Install to workspace -> Allow
 
 &nbsp;
