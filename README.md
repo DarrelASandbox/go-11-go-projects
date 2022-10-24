@@ -8,6 +8,7 @@
     <li><a href="#04-slack-bot-calculates-age">04-slack-bot-calculates-age</a></li>
     <li><a href="#05-slack-bot-uploads-file">05-slack-bot-uploads-file</a></li>
     <li><a href="#06-email-verifier-tool">06-email-verifier-tool</a></li>
+    <li><a href="#07-simple-aws-lambda-example">07-simple-aws-lambda-example</a></li>
   </ol>
 </details>
 
@@ -25,7 +26,7 @@
 4. [Original Repo: slack-bot-calculates-age](https://github.com/AkhilSharma90/GO-Slackbot-Calculates-Age)
 5. [Original Repo: slack-bot-uploads-file](https://github.com/AkhilSharma90/GO-SlackBot-Uploads-File)
 6. [Original Repo: email-verifier-tool](https://github.com/AkhilSharma90/GO-Email-Checking-Tool)
-7. [Original Repo: ]()
+7. [Original Repo: simple-aws-lambda-example](https://github.com/AkhilSharma90/Simple-go-AWS-Lambda-example)
 8. [Original Repo: ]()
 9. [Original Repo: ]()
 10. [Original Repo: ]()
@@ -165,6 +166,33 @@ DELETE  -> /book/{bookId}   -> DELETE BOOK
 &nbsp;
 
 ## 06-email-verifier-tool
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 07-simple-aws-lambda-example
+
+- [Amazon - Lambda execution role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html)
+- [Amazon - region=ap-southeast-1#/roles](https://us-east-1.console.aws.amazon.com/iamv2/home?region=ap-southeast-1#/roles)
+
+```sh
+aws iam create-role --role-name lambda-ex --assume-role-policy-document '{"Version": "2012-10-17","Statement": [{ "Effect": "Allow", "Principal": {"Service": "lambda.amazonaws.com"}, "Action": "sts:AssumeRole"}]}'
+
+# Already set with previous command
+aws iam create-role --role-name lambda-ex --assume-role-policy-document file://07-simple-aws-lambda-example/trust-policy.json
+
+aws iam attach-role-policy --role-name lambda-ex --policy-arn arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+
+cd 07-simple-aws-lambda-example
+go build main.go
+zip function.zip main
+aws lambda create-function --function-name go-simple-aws-lambda-example --zip-file fileb://function.zip --handler main --runtime go1.x --role arn:aws:iam::560476749134:role/lambda-ex
+
+aws lambda invoke --function-name go-simple-aws-lambda-example --cli-binary-format raw-in-base64-out --payload '{"What is your name?": "Jim","How old are you?": 33}' output.txt
+```
 
 &nbsp;
 

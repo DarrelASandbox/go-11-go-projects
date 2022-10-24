@@ -7,4 +7,5 @@ use (
 	./04-slack-bot-calculates-age
 	./05-slack-bot-uploads-file
 	./06-email-verifier-tool
+	./07-simple-aws-lambda-example
 )
