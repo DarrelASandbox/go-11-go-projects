@@ -27,10 +27,10 @@
 5. [Original Repo: slack-bot-uploads-file](https://github.com/AkhilSharma90/GO-SlackBot-Uploads-File)
 6. [Original Repo: email-verifier-tool](https://github.com/AkhilSharma90/GO-Email-Checking-Tool)
 7. [Original Repo: simple-aws-lambda-example](https://github.com/AkhilSharma90/Simple-go-AWS-Lambda-example)
-8. [Original Repo: ]()
-9. [Original Repo: ]()
-10. [Original Repo: ]()
-11. [Original Repo: ]()
+8. [Original Repo: beginner-CRM-project](https://github.com/AkhilSharma90/go-beginner-CRM-project)
+9. [Original Repo: beginner-fiber-HRMS-project](https://github.com/AkhilSharma90/go-beginner-fiber-HRMS-project)
+10. [Original Repo: serverless-project](https://github.com/AkhilSharma90/Golang-Serverless-Project)
+11. [Original Repo: ai-bot-wolfram-slack](https://github.com/AkhilSharma90/AI-Bot-GOlang-Wit.ai-Wolfram-Slack)
 
 &nbsp;
 
