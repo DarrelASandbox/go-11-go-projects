@@ -1,8 +1,10 @@
 go 1.18
 
 use (
+	./01-simple-http-server
 	./02-movies-crud
 	./03-book-management-api
 	./04-slack-bot-calculates-age
 	./05-slack-bot-uploads-file
+	./06-email-verifier-tool
 )

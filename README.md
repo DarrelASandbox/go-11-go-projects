@@ -7,6 +7,7 @@
     <li><a href="#03-book-management-api">03-book-management-api</a></li>
     <li><a href="#04-slack-bot-calculates-age">04-slack-bot-calculates-age</a></li>
     <li><a href="#05-slack-bot-uploads-file">05-slack-bot-uploads-file</a></li>
+    <li><a href="#06-email-verifier-tool">06-email-verifier-tool</a></li>
   </ol>
 </details>
 
@@ -23,7 +24,7 @@
 3. [Original Repo: book-management-api](https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API)
 4. [Original Repo: slack-bot-calculates-age](https://github.com/AkhilSharma90/GO-Slackbot-Calculates-Age)
 5. [Original Repo: slack-bot-uploads-file](https://github.com/AkhilSharma90/GO-SlackBot-Uploads-File)
-6. [Original Repo: ]()
+6. [Original Repo: email-verifier-tool](https://github.com/AkhilSharma90/GO-Email-Checking-Tool)
 7. [Original Repo: ]()
 8. [Original Repo: ]()
 9. [Original Repo: ]()
@@ -156,6 +157,14 @@ DELETE  -> /book/{bookId}   -> DELETE BOOK
   - remote_files:share
   - remote_files:write
 - Install to workspace -> Allow
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 06-email-verifier-tool
 
 &nbsp;
 
