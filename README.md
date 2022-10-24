@@ -2,10 +2,11 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#simple-http-server">simple-http-server</a></li>
-    <li><a href="#movies-crud">movies-crud</a></li>
-    <li><a href="#book-management-api">book-management-api</a></li>
-    <li><a href="#book-management-api">book-management-api</a></li>
+    <li><a href="#01-simple-http-server">01-simple-http-server</a></li>
+    <li><a href="#02-movies-crud">02-movies-crud</a></li>
+    <li><a href="#03-book-management-api">03-book-management-api</a></li>
+    <li><a href="#04-slack-bot-calculates-age">04-slack-bot-calculates-age</a></li>
+    <li><a href="#05-slack-bot-uploads-file">05-slack-bot-uploads-file</a></li>
   </ol>
 </details>
 
@@ -21,7 +22,7 @@
 2. [Original Repo: movies-crud](https://github.com/AkhilSharma90?tab=repositories&type=source)
 3. [Original Repo: book-management-api](https://github.com/AkhilSharma90/Golang-MySQL-CRUD-Bookstore-Management-API)
 4. [Original Repo: slack-bot-calculates-age](https://github.com/AkhilSharma90/GO-Slackbot-Calculates-Age)
-5. [Original Repo: ]()
+5. [Original Repo: slack-bot-uploads-file](https://github.com/AkhilSharma90/GO-SlackBot-Uploads-File)
 6. [Original Repo: ]()
 7. [Original Repo: ]()
 8. [Original Repo: ]()
@@ -35,7 +36,7 @@
 
 &nbsp;
 
-## simple-http-server
+## 01-simple-http-server
 
 ```
         -> /      -> index.html
@@ -49,7 +50,7 @@ Server  -> /hello -> hello func
 
 &nbsp;
 
-## movies-crud
+## 02-movies-crud
 
 - No database
 - CRUD
@@ -71,7 +72,7 @@ Movies Server serving using Gorilla MUX -> CREATE       creteMovie    -> /movies
 
 &nbsp;
 
-## book-management-api
+## 03-book-management-api
 
 - MySQL
 - GORM
@@ -103,8 +104,11 @@ DELETE  -> /book/{bookId}   -> DELETE BOOK
 
 &nbsp;
 
-## slack-bot-calculates-age
+## 04-slack-bot-calculates-age
 
+- `.env`:
+  - `SLACK_BOT_TOKEN=`
+  - `SLACK_SOCKET_TOKEN=`
 - [slack api](https://api.slack.com/)
 - Create slack workspace -> Create app
 - Connect using Socket Mode -> Generate socket-token
@@ -123,6 +127,34 @@ DELETE  -> /book/{bookId}   -> DELETE BOOK
   - mpim:read
   - mpim:write
   - users:read
+- Install to workspace -> Allow
+
+&nbsp;
+
+---
+
+&nbsp;
+
+## 05-slack-bot-uploads-file
+
+- `.env`:
+  - `SLACK_BOT_TOKEN_2=`
+  - `SLACK_SOCKET_TOKEN_2=`
+- [slack api](https://api.slack.com/)
+- Create slack workspace -> Create app
+- Connect using Socket Mode -> Generate socket-token
+- Event Subscription -> Enable Events
+- OAuth & Permissions -> Bot Token Scopes
+  - channels:read
+  - chat:write
+  - files:read
+  - files:write
+  - im:read
+  - im:write
+  - mpim:history
+  - remote_files:read
+  - remote_files:share
+  - remote_files:write
 - Install to workspace -> Allow
 
 &nbsp;
